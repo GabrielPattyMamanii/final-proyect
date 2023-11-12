@@ -1,0 +1,99 @@
+
+/***************************footer*******************************************/
+footer .footer-main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    margin: 20px 0px;
+    
+
+}
+
+/*----------------------NAVEGACION-------------------------*/
+footer .footer-main .navigation-card{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    
+}
+
+footer .footer-main h4 {
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-align: start;
+    padding: 10px 0px;
+    margin: 0px
+}
+
+footer .footer-main .navigation-card {
+    width: auto;
+}
+
+footer .footer-main .navigation-card .navigation{
+    text-decoration: none;
+    color: var(--paragraph);
+}
+
+/*----------------------------------------------------*/
+
+
+/*---------------------METODOS DE PAGO-----------------------*/
+footer .footer-main .payment-methods {
+    width: auto;
+}
+
+footer .footer-main .payment-methods .payments-container {
+    display: grid;
+    padding: 10px 0px;
+    grid-template-columns: repeat(3, 20%);
+    grid-template-rows: repeat(4, 1fr) ;
+    row-gap: 15px;
+    column-gap: 30px;
+}
+/*----------------------------------------------------*/
+
+
+/*----------------------------CONTACTANOS--------------------*/
+
+footer .footer-main .contact {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+}
+
+footer .footer-main .contact a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--paragraph);
+    font-size: 14px;
+}
+
+
+
+/*-------------------------------------------------------------*/
+
+
+
+/*******-----------------Copyright-----------------**********/
+
+footer .copyright {
+    width: 100%;
+    text-align: center;
+}
+
+footer .copyright p{
+    color:var(--paragraph);
+}
+
+
+/**************************************************************/
+
+
+
+/**************************************************************************/

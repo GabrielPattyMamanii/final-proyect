@@ -1,0 +1,81 @@
+:root {
+    --paragraph-color: rgba(51,51,51,.8);
+}
+
+
+.contacto{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+
+.contacto .colums-wrapper{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+}
+
+.contacto .colums-wrapper .colum-1{
+    width: 40%;
+}
+
+.contacto .colums-wrapper .colum-1 div:nth-child(1) a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--paragraph-color);
+}
+
+
+.contacto .colums-wrapper .colum-1 div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contacto .colums-wrapper .colum-1 div:nth-child(2){
+    width: auto;
+    height: 278px;
+    background-color: rebeccapurple;
+}
+
+.contacto .colums-wrapper .colum-2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    width: 40%;
+    height: 593px;
+}
+
+.contacto .colums-wrapper .colum-2 .form-group{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 13%;
+    width: 100%;
+}
+
+.contacto .colums-wrapper .colum-2 .form-group:nth-child(4){
+    height:30%;
+}
+
+.contacto .colums-wrapper .colum-2 .form-group label{
+    margin-bottom: 5px;
+    padding: 5px 0px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.contacto .colums-wrapper .colum-2 .form-group input {
+    padding: 6px 12px;
+    border:1px solid #eee;
+    height: 100%;
+    width: 100%;
+}
+
