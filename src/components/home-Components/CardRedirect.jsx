@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import remera from "../home-Components/remera.webp"
 import "../styles/CardRedirect.css"
 import { Link } from 'react-router-dom'
