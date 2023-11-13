@@ -8,8 +8,8 @@ import PurchaseSummary from "./products-components/PurchaseSummary";
 import productos from "../pages/Productos";
 import contacto from "../pages/Contacto"
 import politicaDeDevolucion from "../pages/PoliticaDeDevolucion"
-import ButtonViewmore from "./Home-Components/ButtonViewmore";
+/* import ButtonViewmore from "./Home-Components/ButtonViewmore"; */
 
 export {Error404, Header, productos, contacto, 
-        politicaDeDevolucion, ButtonViewmore, Footer, 
+        politicaDeDevolucion, Footer, 
         Moreinformation, PurchaseSummary}
