@@ -11,7 +11,7 @@ const contacto = () => {
   return (
     <div className="contacto">
 
-     
+
       <Titulo title={'CONTACTO'}/>
       
 
@@ -29,19 +29,19 @@ const contacto = () => {
       </div>
       <div className="colum-2">
       <div className="form-group">
-            <label for="nombre">Nombre:</label>
+            <label htmlFor="nombre">Nombre:</label>
             <input type="text"/>
           </div>
           <div className="form-group">
-            <label for="nombre">Email:</label>
+            <label htmlFor="nombre">Email:</label>
             <input type="text"/>
           </div>
           <div className="form-group">
-            <label for="nombre">Telefono(Opcional):</label>
+            <label htmlFor="nombre">Telefono(Opcional):</label>
             <input type="text"/>
           </div>
           <div className="form-group">
-            <label for="nombre">Mensaje(Opcional):</label>
+            <label htmlFor="nombre">Mensaje(Opcional):</label>
             <input type="text"/>
           </div>
       </div>

@@ -7,7 +7,7 @@ import "../pages/styles/Productos.css"
 
 /* import {productsCat} from "../productsCat" */
 
-const productos = () => {
+const Productos = () => {
   const { prodSearch } = useGlobalContext();
 
 
@@ -45,7 +45,7 @@ const productos = () => {
   )
 }
 
-export default productos
+export default Productos
 
 
 

@@ -1,8 +1,9 @@
-import { products } from '../productsDB'
+/* eslint-disable react/prop-types */
+/* import { products } from '../productsDB' */
 import { Link } from 'react-router-dom'
 import CardRedirect from '../components/home-Components/CardRedirect'
 import "../pages/styles/Home.css"
-import { ButtonViewmore } from '../components'
+/* import { ButtonViewmore } from '../components' */
 
 
 
@@ -19,7 +20,7 @@ const Home = () => {
                     <CardRedirect title="buzos"/>
                 </div>
                 <div className="all-products--button">
-                    <ButtonViewmore text="VER TODOS LOS PRODUCTOS"/>
+{/*                     <ButtonViewmore text="VER TODOS LOS PRODUCTOS"/> */}
                 </div>
             </section>
             
@@ -35,7 +36,7 @@ const Home = () => {
                         <div className="input-box">
                             <input type="text" placeholder='Tu-Email'/>
                         </div>
-                        <ButtonViewmore text="INSCRIBIRSE"/>
+{/*                         <ButtonViewmore text="INSCRIBIRSE"/> */}
                     </div>
                 </div>
             </section>
