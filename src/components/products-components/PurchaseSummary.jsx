@@ -1,13 +1,13 @@
 /* eslint-disable react/no-unknown-property */
 /* eslint-disable react/prop-types */
-import { useState } from 'react';
+/* import { useState } from 'react'; */
 import { useGlobalContext } from '../../context/GlobalContextProvider';
 import "../styles/PurchaseSummary.css"
 
 const PurchaseSummary = () => {
 
   const {activateSummary, cart, deleteObject, controlCant} = useGlobalContext()
-  const [selectCant, setSelectCant] = useState()
+/*   const [selectCant, setSelectCant] = useState() */
   
 
 

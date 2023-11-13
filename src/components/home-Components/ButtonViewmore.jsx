@@ -1,5 +1,6 @@
 import "../styles/ButtonViewmore.css"
 
+// eslint-disable-next-line react/prop-types
 const ButtonViewmore = ({text}) => {
   return (
     <button>

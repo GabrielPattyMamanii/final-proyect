@@ -7,8 +7,6 @@ const GlobalContext = createContext();
 // eslint-disable-next-line react/prop-types
 const GlobalContextProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
-  const [cartCantProduct, setCartCantProduct] = useState([]);
-  const [priceCantProduct, setPriceCantProduct] = useState([])
 
   const [prodSearch, setProdSearch] = useState([]);
   const [totalDevolver, setTotalDevolver] = useState(0)
@@ -57,22 +55,33 @@ const GlobalContextProvider = ({ children }) => {
   const controlCant = (control, id) => {
 
     console.log("id:",id)
+/* 
+    const productFound = cart.find((producto) => producto.id == id); */
 
-    cart.find((producto) => producto.id == id);
+/*     let nuevaCantidad = 0
 
-      setCart(
-        cart.map((producto) => {
+    if(control=="+"){
+      nuevaCantidad = productFound.quantity++
+    }else if(control=="-"){
+      nuevaCantidad = productFound.quantity--
+    } */
+/*       setCart(
+        (prevProductos) =>
+        prevProductos.map((producto) =>
+          producto.id === id ? { ...producto, quantity: nuevaCantidad } : producto
+        )
 
+      ) */
+/*         cart.map((producto) => {
           if(control=="+"){
-            producto.quantity++;
+              productFound.quantity++
           }else if (control=="-"){
-            if(producto.quantity>1){
-              producto.quantity--;
+            if(productFound.quantity>1){
+                productFound.quantity--
             }
           }
           return producto;
-        })
-      )
+        }) */
   }
 
   const calcularTotal = (id, cant, isdelete) => {
