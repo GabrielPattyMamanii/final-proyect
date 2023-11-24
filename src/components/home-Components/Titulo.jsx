@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import "../styles/Titulo.css"
 
 const Titulo = ({title}) => {

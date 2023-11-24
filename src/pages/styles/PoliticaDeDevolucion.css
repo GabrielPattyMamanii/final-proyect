@@ -7,6 +7,9 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    position: relative;
+    top: 80px;
+    
 }
 
 .politicaDeDevolucion .information {

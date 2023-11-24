@@ -1,14 +1,39 @@
-/* import React, { useState } from "react"
- */
+import { useState, useEffect } from "react"
+
 import Titulo from "../components/home-Components/Titulo"
 import Itemcard from "../components/products-components/Itemcard"
 import { useGlobalContext } from "../context/GlobalContextProvider"
+import {productsCat} from "../productsCat"
 import "../pages/styles/Productos.css"
 
-/* import {productsCat} from "../productsCat" */
-
 const Productos = () => {
-  const { prodSearch } = useGlobalContext();
+  const { productsSearch, prodSearch } = useGlobalContext();
+
+
+  const [viewFilter, setViewFilter] = useState(false)
+
+  const [searchString, setSearchString] = useState("");
+/*    const [listaProductos, setListaProductos] = useState(productsCat);  */
+
+  const handleFilterProducto = (evento) => {
+    setSearchString(evento);
+    setViewFilter(true)
+  };
+
+  const restartCatalog = () => {
+      productsSearch(productsCat)
+      setViewFilter(false)
+  };
+
+  useEffect(() => {
+    const productosFiltrados = productsCat.filter((producto) =>
+      producto.categoria.toLowerCase().includes(searchString.toLowerCase())
+    );
+
+    window.scrollTo(0, 0)
+
+    productsSearch(productosFiltrados);
+  }, [searchString]);
 
 
   return (
@@ -19,18 +44,22 @@ const Productos = () => {
       <div className="products">
         <div className="category-container">
           <h4>CATEGORIAS</h4>
-          <a href="">Pantalones</a>
-          <a href="">Remeras</a>
-          <a href="">Camperas</a>
-          <a href="">Calzas</a>
-          <a href="">Termicos</a>
-          <a href="">Lenceria</a>
+          
+          <a onClick={()=>handleFilterProducto('pantalones')}>Pantalones</a>
+          <a onClick={()=>handleFilterProducto('remeras')}>Remeras</a>
+          <a onClick={()=>handleFilterProducto('camperas')}>Camperas</a>
+          <a onClick={()=>handleFilterProducto('calzas')}>Calzas</a>
+          <a onClick={()=>handleFilterProducto('termicos')}>Termicos</a>
+          <a onClick={()=>handleFilterProducto('lenceria')}>Lenceria</a>
+          { viewFilter ? 
+          <a onClick={restartCatalog}>Eliminar filtro </a>
+          : null }
         </div>
 
         <div className="catalog">
           {
             prodSearch.map(({id,image, categoria, nombre, precio})=>(
-              <Itemcard key={id} id={id} categoria={categoria} nombre={nombre} precio={precio} image={image}/>
+              <Itemcard key={id} id={id} categoria={categoria} nombre={nombre} precio={precio} image={image[0]}/>
               
             ))
             }
@@ -46,37 +75,3 @@ const Productos = () => {
 }
 
 export default Productos
-
-
-
-
-/* const DateProduct = () => {
-  return(
-    <div>
-      <h1></h1>
-      <h4>categoria</h4>
-      <span>precio</span>
-
-    <div className="colors">
-      <div className="color"></div>
-      <div className="color"></div>
-      <div className="color"></div>
-      <div className="color"></div>
-    </div>
-
-    <div className="buttons">
-      <button id="viewmore">AGREGAR AL CARRITO</button>
-      <button>AGREGAR TODAS LAS VARIANTES AL CARRITO</button>
-      <button>BORRAR TODAS LAS VARIANTES DEL CARRITO</button>
-    </div>
-    </div>
-
-  )
-} */
-/*const CircleColors = () => {
-  return(
-
-
-
-  )
-}*/

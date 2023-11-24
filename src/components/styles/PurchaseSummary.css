@@ -1,13 +1,191 @@
-.summary {
-    z-index: 999;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    height: 100vh;
-    width: 25vw;
+.summaryContainer {
+    z-index: 998;
+    padding: 10px 10px;
+    padding-top: 0px;
+    width: 30vw;
     position: fixed;
-    pointer-events: auto; 
     top: 0px;
     right: 0px;
     background-color: #D0D3D6;
+    gap: 10px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+}
+
+.summaryContainer .finish-buy-container {
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.summaryContainer .finish-buy{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    width: 400px;
+    height: 200px;
+    background-color: white;
+    border-radius: 30px;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.summaryContainer .information-buy h3, h4{
+    margin: 20px;
+}
+
+.summaryContainer .nothing h1{
+    margin-bottom: 0px;
+}
+
+.summaryContainer .nothing p{
+    margin-top: 0px;
+    font-size: 18px;
+}
+
+.summary-backgraund{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.summaryContainer .summary-backgraund .exitSummary{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+    position: relative;
+    top: 10px;
+    right: 15px;
+}
+
+.summaryContainer .summary-backgraund .exitSummary .HighlightOffIcon{
+    cursor: pointer;
+    color: #888;
+    font-size: 35px;
+    transition: .2s;
+}
+
+
+.summaryContainer .summary-backgraund .exitSummary .HighlightOffIcon:hover{
+    color: black;
+}
+
+.summary {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+    max-height: 93vh;
+    overflow-y: auto;
+    width: 95%;
+}
+
+/* Estilo del scrollbar */
+.summary::-webkit-scrollbar {
+    width: 10px; /* Ancho del scrollbar */
+
+}
+
+  /* Estilo del 'pulgón' (la parte que puedes arrastrar) */
+.summary::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color del pulgón */
+    border-radius: 6px; /* Bordes redondeados del pulgón */
+}
+
+  /* Estilo de la pista (la parte del fondo) */
+.summary::-webkit-scrollbar-track {
+    background-color: transparent; /* Color de fondo de la pista */
+    border-radius: 20px; /* Bordes redondeados de la pista */
+}
+
+.summary .cartProduct {
+    padding: 5px 10px;
+    background-color: white;
+    flex-direction: column;
+    justify-content: center;
+    height: 110px;
+    width:90%;
+    border-radius: 10px
+
+}
+
+.summary .cartProduct .container:nth-child(1){
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 50%;
+    border: 2px #C2C6CA solid;
+    border-radius: 10px;
+    padding: 0px 5px;
+}
+
+.summary .cartProduct .container:nth-child(1) div {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+    width: 60%;
+    gap: 5px;
+}
+
+.summary .cartProduct .container:nth-child(1) div h5{
+    margin: 0px;
+    font-size: 15px;
+}
+
+.summary .cartProduct .container:nth-child(1) p{
+    margin: 0px;
+    font-size: 13px;
+}
+
+.summary .cartProduct .container:nth-child(2) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.summary .cartProduct .container:nth-child(2) div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+}
+
+
+.summary .cartProduct .container:nth-child(2) div button{
+    background: linear-gradient(90deg, rgba(237,229,229,1) 0%, rgba(194,194,210,1) 35%, rgba(196,195,195,1) 100%);
+    padding: 0px;
+    width: 40px;
+    height: 30px;
+    color: black;
+    border-radius: 20px;
+}
+
+.summary .cartProduct .container:nth-child(2) button{
+    background: linear-gradient(90deg, rgba(237,229,229,1) 0%, rgba(194,194,210,1) 35%, rgba(196,195,195,1) 100%);
+    padding: 0px;
+    width: 100px;
+    height: 30px;
+    color: black;
+    border-radius: 20px;
 }

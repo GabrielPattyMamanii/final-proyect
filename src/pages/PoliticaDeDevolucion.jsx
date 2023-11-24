@@ -1,9 +1,15 @@
 
+import { useEffect } from 'react'
 import Titulo from '../components/home-Components/Titulo'
 
 import "../pages/styles/PoliticaDeDevolucion.css"
 
-const politicaDeDevolucion = () => {
+const PoliticaDeDevolucion = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+}, [])
+
   return (
     <div className='politicaDeDevolucion'>
 
@@ -69,4 +75,4 @@ const politicaDeDevolucion = () => {
   )
 }
 
-export default politicaDeDevolucion
+export default PoliticaDeDevolucion

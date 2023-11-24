@@ -3,34 +3,64 @@
 /* import { useState } from 'react'; */
 import { useGlobalContext } from '../../context/GlobalContextProvider';
 import "../styles/PurchaseSummary.css"
+import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 
 const PurchaseSummary = () => {
 
-  const {activateSummary, cart, deleteObject, controlCant} = useGlobalContext()
+  const {anyObjects, activateSummary, cart, deleteObject, totalProductInTheCart, controlCant, finishBuy, totalDevolver, popup, changePopup} = useGlobalContext()
 /*   const [selectCant, setSelectCant] = useState() */
   
 
 
   return (
-    <div className="summary">
+    
+
+    <div className="summaryContainer ">
+      { anyObjects ?   <div className='nothing'>
+        <h1>NADA POR ACA!</h1>
+        <p>
+          Añade un producto a tu carrito y luego vuelve aqui!!
+        </p>
+        </div>  : null}
       
-      {
-        cart.map(({nombre, precio, categoria, id, quantity})=>(
-            <CartProduct 
-            id={id} 
-            key={id} 
-            nombre={nombre} 
-            precio={precio} 
-            categoria={categoria} 
-            cantidad={quantity} 
-            deleteObject={deleteObject}
-            controlCant={controlCant}
-            />
-          )
-        )
-      }
-      <button onClick={activateSummary}>Cerrar</button>
-      
+      <div className="summary-backgraund">
+          <div className="exitSummary">
+            <HighlightOffIcon className='HighlightOffIcon' onClick={activateSummary}/>
+          </div>
+        <div className="summary">
+          {
+            cart.map(({nombre, precio, categoria, id, quantity})=>(
+                <CartProduct
+                id={id} 
+                key={id} 
+                nombre={nombre} 
+                precio={precio} 
+                categoria={categoria} 
+                cantidad={quantity} 
+                deleteObject={deleteObject}
+                controlCant={controlCant}
+                />
+              )
+            )
+          }
+        </div>
+
+        { !anyObjects ? 
+        <div className='information-buy'>
+        <h3>Total: ${totalDevolver}</h3>
+        <h4>Cant.de productos: {totalProductInTheCart}</h4>
+        <button onClick={()=>finishBuy()}>Comprar</button>
+        </div>
+        
+        :null}
+      </div>
+
+      { popup ? <div className='finish-buy-container'>
+        <div className='finish-buy'>
+          ¡Compra realizada!
+          <button onClick={()=>changePopup(1)}>Seguir Comprando</button></div>
+        </div>:null}
+
     </div>
   );
 };
@@ -42,14 +72,23 @@ const CartProduct = ({id, nombre, precio, categoria, cantidad, deleteObject, con
   console.log()
 
 return(
-  <div>
-    <h1>{nombre}</h1>
-    <p>{precio}</p>
-    <p>{categoria}</p>
-    <p>{cantidad}</p>
-    <button onClick={() => controlCant("+", id)}>+</button>
-    <button onClick={() => controlCant("-", id)}>-</button>
-    <button onClick={() => deleteObject(id)}>Eliminar todos</button>
+  <div className='cartProduct'>
+    <div className='container'>
+      <div>
+        <h5>{nombre}</h5>
+        <p>Categoria: {categoria}</p>
+      </div>
+      <p>${precio}</p>
+    </div>
+    
+    <div className='container'>
+      <div>
+        <button onClick={() => controlCant("+", id)}>+</button>
+        <p>{cantidad}</p>
+        <button onClick={() => controlCant("-", id)}>-</button>
+      </div>
+      <button onClick={() => deleteObject(id)}>Eliminar todos</button>
+    </div>
   </div>
 )
 }

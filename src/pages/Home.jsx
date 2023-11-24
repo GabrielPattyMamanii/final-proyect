@@ -3,19 +3,22 @@
 import { Link } from 'react-router-dom'
 import CardRedirect from '../components/home-Components/CardRedirect'
 import "../pages/styles/Home.css"
+import { useEffect } from 'react'
 /* import { ButtonViewmore } from '../components' */
-
-
 
 const Home = () => {
     
-  return (
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
+return (
     <div>
         
         <main>
             <section className="products-section-fast">
                 <div className="fast-direction">
-                <   CardRedirect title="buzos"/>
+                    <CardRedirect title="buzos"/>
                     <CardRedirect title="buzos"/>
                     <CardRedirect title="buzos"/>
                 </div>
@@ -40,37 +43,6 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-
- {/*
-            <section className="more-information">
-            <section className="follower-wrapper">
-                <div className="subtitle"><h2>SEGUINOS</h2></div>
-                <div className="socials-icons">
-                    <span><InstagramIcon/></span>
-                    <span><FacebookIcon/></span>
-                </div>
-            </section>
-
-            <section className='service-container'>
-
-                <div className="service-card">
-                    <h3><LocalShippingIcon/>ENVIAMOS TU COMPRA</h3>
-                    <p>Entregas a todo el pais</p>
-                    </div>
-
-                <div className="service-card">
-                    <h3><AttachMoneyIcon/>VENTA MAYORISTA</h3>
-                    <p>Minimo de compra $18.000</p>
-                    </div>
-
-                <div className="service-card">
-                    <h3><WhatsAppIcon/>ESCRIBINOS POR WHATSAPP!</h3>
-                    <p>+54 1132551043</p>
-                    </div>
-
-            </section>
-            </section>
-*/}
 
         </main>
 

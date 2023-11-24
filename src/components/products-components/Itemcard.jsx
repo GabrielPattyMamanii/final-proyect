@@ -5,7 +5,7 @@
 import "../styles/Itemcard.css"
 import { Link } from "react-router-dom";
 
-const Itemcard = ({image, id, nombre, precio}) => {
+const Itemcard = ({image, id, nombre, precio, categoria}) => {
 
 /*   const llamar = () => {
     ejecutarFuncion(categoria, precio, nombre)
@@ -17,11 +17,12 @@ const Itemcard = ({image, id, nombre, precio}) => {
       <div className="itemcard">
 
         <div className="image">
-          <img src={image} style={{width:"171.625px", height:"100%"}} />
+          <img src={image}/>
         </div>
 
         <div className="info-card">
           <h4>{nombre}</h4>
+          <p>{categoria}</p>
           <span>${precio}</span>
           {/* <button onClick={llamar} id="viewmore">Ver mas</button> */}
           <button><Link className="link" to={"/detail/" + id}>Ver Mas</Link></button>

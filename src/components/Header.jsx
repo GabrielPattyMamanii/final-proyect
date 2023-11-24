@@ -10,7 +10,7 @@ import {productsCat} from "../productsCat"
 
 const Header = () => {
   const [searchString, setSearchString] = useState("");
-  const { productsSearch, totalDevolver, activateSummary } = useGlobalContext();
+  const { productsSearch, totalDevolver, activateSummary, totalProductInTheCart } = useGlobalContext();
   const [listaProductos, setListaProductos] = useState(productsCat);
   
 
@@ -51,8 +51,10 @@ const Header = () => {
                 <SearchIcon className='icon-search'/>
                 </div>
               <div className="card-widget" onClick={activateSummary}>
-                <ShoppingCartIcon className='ShoppingCartIcon'/>
-                <div className="cant-items">0</div>
+                <div className="cart-container">
+                  <ShoppingCartIcon className='ShoppingCartIcon'/>
+                  <div className="cant-items">{totalProductInTheCart}</div>
+                </div>
                 <div className="price-total">${totalDevolver}</div>
               </div>
             </div>

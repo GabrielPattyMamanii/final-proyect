@@ -1,0 +1,128 @@
+.Product-Detail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-container {
+    margin-top: 100px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    padding: 20px 20px;
+    width: 60vw;
+    height: 600px;
+    border: 2px solid black;
+    border-radius: 30px;
+}
+
+.product-container .product-image {
+    
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    border-radius: 10px; /* Ajusta el valor según sea necesario para obtener el redondeado deseado */
+    border: 2px solid #222121; /* Color y ancho del borde */
+    overflow: hidden; 
+
+    
+}
+
+.product-container .product-image .flowIcon{
+    font-size: 40px;
+    transition: .2s;
+    cursor: pointer;
+    position: absolute;
+}
+
+.product-container .product-image .flowIcon:nth-child(1){
+    left: 0px;
+}
+
+.product-container .product-image .flowIcon:nth-child(3){
+    right: 0px;
+}
+
+.product-container .product-image .flowIcon:hover{
+    color :#C8C8C8;
+}
+
+.product-container .product-information {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 0px;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+}
+
+.product-container .product-information h1{
+    width: 100%;
+    text-align: start;
+    margin: 0px;
+    padding-left: 30px;
+    font-size: 40px;
+}
+
+.product-container .product-information h2{
+    text-align: start;
+    padding-left: 30px;
+}
+
+.product-container .product-information .cant-container {
+    display: flex;
+    gap: 60px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    padding-left: 30px;
+}
+
+.product-container .product-information .cant-container .select-cant{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.product-container .product-information .cant-container .select-cant h5{
+    margin: 0px;
+}
+
+.product-container .product-information .cant-container .select-cant input{
+    text-decoration: none;
+    border: 2px #C8C8C8 solid;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 5px 5px;
+    padding-left: 10px;
+    
+}
+
+.product-container .product-information .cant-container input::placeholder {
+    color: black;
+}
+
+.product-container .product-information .cant-container button {
+    border-radius: 20px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.product-container .product-information .cant-container button:hover{
+    background: rgb(80,72,72);
+    background: linear-gradient(0deg, rgba(80,72,72,1) 0%, rgba(149,149,154,1) 35%, rgba(195,195,195,1) 100%);
+    color: black;
+}
+
+.product-container .product-information .cant-container button:active{
+    transform: translateY(2px);
+}
+
+.product-container .product-information .description-product {
+    text-align: start;
+    padding-left: 30px;
+}

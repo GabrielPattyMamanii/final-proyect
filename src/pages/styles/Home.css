@@ -4,14 +4,14 @@
 
 /********************************products-section-fast***********************************/
 
-
-
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 50px;
 }
+
+
 
 main .fast-direction{
     display: flex;

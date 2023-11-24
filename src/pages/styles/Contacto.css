@@ -8,7 +8,8 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    
+    position: relative;
+    top: 80px;
 }
 
 
@@ -21,6 +22,9 @@
 
 .contacto .colums-wrapper .colum-1{
     width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .contacto .colums-wrapper .colum-1 div:nth-child(1) a {
@@ -36,13 +40,21 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    gap: 5px;
 }
 
-.contacto .colums-wrapper .colum-1 div:nth-child(2){
-    width: auto;
-    height: 278px;
-    background-color: rebeccapurple;
+.contacto .colums-wrapper .colum-1 .mapa{
+    width: 500px;
+    height: 300px;
 }
+/* 
+
+    EQUIVALE A LO MISMO QUE ARRIBA
+
+    .leaflet-container{
+    width: 300px;
+    height: 300px;
+} */
 
 .contacto .colums-wrapper .colum-2{
     display: flex;

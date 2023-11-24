@@ -13,7 +13,7 @@ return (
                 <img src={remera}/>
         </div>
         <div className="banner-text">
-            <div className="title"><h3>{title}</h3></div>
+            <div className="title-resume"><h3>{title}</h3></div>
             <Link className="cartita" to={"/detail/"+{direction} }>
             <div><ButtonViewmore text="VER MAS"/></div>
             </Link>
