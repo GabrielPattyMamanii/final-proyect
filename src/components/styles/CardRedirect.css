@@ -1,0 +1,45 @@
+.colum-sm{
+    display: flex;
+    justify-content: center;
+    padding: 0px 15px;
+    width: 360px;
+    height: 487px;
+    position: relative;
+}
+
+.colum-sm .banner-image{
+    width: auto;
+    height: auto;
+    
+}
+
+.colum-sm .banner-image img{
+    width: 100%;
+    height: 90%;
+    border-radius: 10% / 50%;
+    pointer-events: none;
+    
+}
+
+.colum-sm .banner-text {
+    background-color: rgb(247, 247, 247);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    border-radius: 10px 100px / 120px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    width: 60%;
+    bottom: 0px;
+}
+
+.colum-sm .banner-text .title-resume h3{
+    margin: 10px 0px;
+}
+
+.colum-sm .banner-text .title-resume{
+    text-decoration: none;
+    color:rgb(51, 51, 51);
+    letter-spacing: 2px;
+    font-size: 20px;
+}

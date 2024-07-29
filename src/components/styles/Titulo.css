@@ -1,0 +1,19 @@
+
+.direction-now{
+    width: 80%;
+}
+
+.direction-now .title{
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    gap: 10px;
+}
+
+.direction-now .title:after, .title:before{
+    flex-grow: 1;
+    height: 1px;
+    content: '\a0';
+    background-color: #D0D3D6;
+    
+}
